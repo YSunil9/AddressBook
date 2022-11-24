@@ -8,6 +8,7 @@ namespace AddressBook
         {
            Contact person=new Contact();
             person.addcontact();
+            person.EditContact();
         }
     }
 }
