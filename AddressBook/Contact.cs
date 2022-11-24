@@ -8,7 +8,7 @@ namespace AddressBook
 {
     class Contact
     {
-     List<Person> person1 = new List<Person>();
+        List<Person> person1 = new List<Person>();
         public void addcontact()
         {
             Person person = new Person();
@@ -40,6 +40,18 @@ namespace AddressBook
             Console.WriteLine("Enter a new Name");
             Console.ReadLine();
             Console.WriteLine("Contacts are successfully Edited");
+            Console.ReadLine();
+        }
+        //UC4-Delete contact Details
+        public void RemoveDetails()
+        {
+            Console.WriteLine("Enter the first Name");
+            string FirstName = Console.ReadLine();
+            Console.WriteLine("Enter the last Name");
+            string LastName = Console.ReadLine();
+            Person person = new Person();
+            person1.Remove(person);
+            Console.WriteLine("Contacts are successfully Deleted");
             Console.ReadLine();
         }
     }
