@@ -87,22 +87,22 @@ namespace AddressBook
             person1 = new List<Person>();
         }
         //UC6
-        //public void DisplayDict()
-        //{
-        //    foreach (var data in person2)
-        //    {
-        //        Console.WriteLine(data.Key);
-        //        foreach (var contact in data.Value)
-        //        {
-        //            Console.WriteLine(contact.FirstName);
-        //            Console.WriteLine(contact.LastName);
-        //            Console.WriteLine(contact.Address);
-        //            Console.WriteLine(contact.PhoneNo);
-        //            Console.WriteLine(contact.ZipCode);
-        //            Console.WriteLine(contact.EmailId);
-        //        }
-        //    }
-        //}
+        public void DisplayDict()
+        {
+            foreach (var data in person2)
+            {
+                Console.WriteLine(data.Key);
+                foreach (var contact in data.Value)
+                {
+                    Console.WriteLine(contact.FirstName);
+                    Console.WriteLine(contact.LastName);
+                    Console.WriteLine(contact.Address);
+                    Console.WriteLine(contact.PhoneNo);
+                    Console.WriteLine(contact.ZipCode);
+                    Console.WriteLine(contact.EmailId);
+                }
+            }
+        }
     }
 }
 
