@@ -18,18 +18,32 @@ namespace AddressBook
             person.FirstName = Console.ReadLine();
             Console.Write("Enter Last Name: ");
             person.LastName = Console.ReadLine();
-            Console.Write("Enter Phone Number: ");
-            person.PhoneNo = Console.ReadLine();
             Console.Write("Enter Address : ");
-
             person.Address = Console.ReadLine();
+            Console.Write("Enter Phone Number: ");
+            person.PhoneNo = Console.ReadLine();           
             Console.Write("Enter city : ");
             person.City = Console.ReadLine();
             Console.Write("Enter pinCode : ");
             person.ZipCode = Console.ReadLine();
             Console.Write("Enter EmailId : ");
             person.EmailId = Console.ReadLine();
-            person1.Add(person);
+            //UC7
+            if (person1.Count > 0)
+            {
+                foreach (var contact in person1)
+                {
+                    if (contact.FirstName.Equals(person.FirstName) && contact.LastName.Equals(person.LastName))
+                    {
+                        Console.WriteLine("*************");
+                        Console.WriteLine(person.FirstName + " is already Present in the AddressBook");
+                    }
+                    else
+                        person1.Add(person);
+                }
+            }
+            else
+                person1.Add(person);
             Console.ReadLine();
         }
         //UC3-Edit person Details
